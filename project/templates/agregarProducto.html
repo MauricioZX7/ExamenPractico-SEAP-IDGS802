@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {%from "_macros.html" import render_field%}
+
+    <h1 class="titulos">Agregar Productos</h1>
+    <hr>
+    <br>
+    <div class="container" id="contenedor-agproducto">
+        <form action="/agregarProducto" name="sent" id="form-producto" method="post">
+            <div class="row">
+                <div class="col-6">
+                    <label class="form-label">Nombre producto: </label>
+                    <input type="text" class="form-control" name="nombreProducto">
+                </div>
+                <div class="col-6">
+                    <label class="form-label">Categoria: </label>
+                    <input type="text" class="form-control" name="categoria">
+                </div>
+                <div class="col-8">
+                    <label class="form-label">Descripcion: </label>
+                    <textarea type="text" class="form-control" name="descripcion"></textarea>
+                </div>
+                <div class="col-4">
+                    <label class="form-label">Unidad medida: </label>
+                    <input type="text" class="form-control" name="unidadMedida" placeholder="pz., ml, kg, g">
+                </div>
+                <div class="col-3">
+                    <label class="form-label">Marca: </label>
+                    <input type="text" class="form-control" name="marca" placeholder="Pepsi">
+                </div>
+                <div class="col-3">
+                    <label class="form-label">Precio: </label>
+                    <input type="text" class="form-control" name="precio" placeholder="299.99">
+                </div>
+                <div class="col-6">
+                    <label class="form-label">Imagen: </label>
+                    <input type="file" class="form-control" name="imagen">
+                </div>
+            </div>
+            <div>
+                <br>
+                <input type="submit" class="btn btn-outline-success" name="agregar" value="Agregar">
+                <br>
+                <a href="/productos" class="btn btn-outline-danger">Cancelar</a>
+            </div>
+        </form>
+    </div>
+    
+
+
+{% endblock %}

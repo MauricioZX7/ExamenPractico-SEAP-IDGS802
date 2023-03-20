@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% from 'macros.html' import card %}
+
+    <h1 class="titulos">Productos</h1>
+    <hr>
+    <br>
+    <div class="container">
+        <div class="row">
+            {% for producto in productos %}
+                <div class="col-md-3">
+                    {{ product_card(producto.imagen, producto.nombreProducto, producto.marca, producto.precio, producto.descripcion, role) }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}

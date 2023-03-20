@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256.0px"
+   height="256.0px"
+   viewBox="0 0 256.0 256.0"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="IconLogoS1.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:export-filename="IconLogoS2.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview620"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="0.16283643"
+     inkscape:cx="764.5709"
+     inkscape:cy="282.49206"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid743" />
+  </sodipodi:namedview>
+  <defs
+     id="defs615" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       fill="none"
+       fill-rule="evenodd"
+       id="g12"
+       transform="matrix(6.6333869,0,0,6.6333869,0.36786551,18.048743)">
+      <g
+         id="g10"
+         transform="scale(1.0012933,1)">
+        <g
+           id="g8">
+          <path
+             fill="#d52b1e"
+             d="m 30.402,3.415 c -1.859,0 -4.436,0.79 -6.308,3.366 -0.344,0.47 -0.625,1.068 -0.79,1.657 -0.572,2.007 -0.17,4.216 1.085,5.908 0.962,1.302 2.19,2.276 3.274,3.136 0.53,0.42 1.655,1.484 2.018,1.935 0.541,0.677 0.953,1.08 1.442,2.57 0.296,0.904 0.338,2.095 0.193,2.77 3.393,-3.44 7.099,-7.905 7.099,-12.762 0,-5.58 -3.997,-8.58 -8.013,-8.58"
+             id="path2"
+             style="fill:#ffffff" />
+          <path
+             fill="#b6bf00"
+             d="m 24.088,22.281 c -1.416,-1.929 -3.054,-3.1 -4.406,-4.334 -0.59,-0.537 -1.236,-0.933 -1.714,-1.41 -2.293,-2.278 -3.365,-5.086 -2.823,-8.543 0.428,-2.711 1.774,-4.492 3.4,-5.8 C 16.604,0.772 14.301,0 11.699,0 5.24,0 -0.16,5.19 0.004,11.59 0.297,23.142 14.766,32.986 20.728,35 c 3.188,-1.632 4.882,-4.684 4.882,-7.815 0,-2.283 -0.978,-4.164 -1.522,-4.904"
+             id="path4" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

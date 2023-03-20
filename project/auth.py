@@ -2,8 +2,9 @@ from flask import Blueprint, render_template, redirect, url_for, request, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_security import login_required
 from flask_security.utils import login_user, logout_user, hash_password, encrypt_password
-from .models import User
+from .models import User, Role
 from . import db, userDatastore
+
 
 auth = Blueprint("auth",__name__, url_prefix="/security")
 
@@ -38,6 +39,7 @@ def register_post():
     email = request.form.get("email")
     name = request.form.get("name")
     password = request.form.get("password")
+    user_role = "user"
 
     #Consultamos si existe un usuario ya registrado con ese email
     user = User.query.filter_by(email=email).first()
@@ -46,9 +48,21 @@ def register_post():
         flash("El correo electronico ya está en uso")
         return redirect(url_for("auth.register"))
     
+   
+    #Consultamos si existe el Rol de "user" en la base de datos
+    role = Role.query.filter_by(name=user_role).first()
+
+    #Si no existe el rol lo creamos
+    if not role:
+        role = Role(name=user_role,description="Usuario cliente, solo puede ver los productos")
+        db.session.add(role)
+
     #Creamos un nuevo usuario y lo guardamos en la bd
 
-    userDatastore.create_user(name=name, email=email, password = generate_password_hash(password, method="sha256"))
+    new_user = userDatastore.create_user(name=name, email=email, password = generate_password_hash(password, method="sha256"))
+
+    new_user.roles.append(role)
+    
     db.session.commit()
     
     return redirect(url_for("auth.login"))

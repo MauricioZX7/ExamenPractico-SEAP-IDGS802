@@ -1,0 +1,50 @@
+{% macro render_input(name,placeholder,type="number") %}
+
+    <div class="control-group">
+        <label for="{{name}}" class="control-label">{{placeholder}}</label>
+        <div class="controls">
+            <input type="{{type}}" name="{{name}}" placeholder="{{placeholder}}" value="">
+        </div>
+    </div>
+
+{%endmacro%}
+
+{% macro render_field(field) %}
+
+    <div class="control-group">
+        <div class="controls">
+            {{field.label}}
+            {{field(**kwargs)|safe}}
+        </div>
+    </div>
+    {%if field.errors%}
+    <ul>
+        {%for error in field.errors%}
+        <li style="color: red">
+            {{error}}
+        </li>
+        {%endfor%}
+    </ul>
+    {%endif%}
+
+{%endmacro%}
+
+{% macro product_card(imagen, nombreProducto, marca, precio, descripcion, role) %}
+    <div class="card">
+        <img class="card-img-top" src="data:image/png;base64,{{ imagen }}" alt="Product Image">
+        <div class="card-body">
+            <h5 class="card-title">{{ nombreProducto }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ marca }}</h6>
+            <p class="card-text">{{ descripcion }}</p>
+            <p class="card-text">{{ precio }}</p>
+        </div>
+        <div class="card-footer">
+            {% if role == 'admin' %}
+                <a href="#" class="btn btn-primary">Modificar</a>
+                <a href="#" class="btn btn-danger">Eliminar</a>
+            {% else %}
+                <a href="#" class="btn btn-success">Agregar al Carrito</a>
+            {% endif %}
+        </div>
+    </div>
+{% endmacro %}

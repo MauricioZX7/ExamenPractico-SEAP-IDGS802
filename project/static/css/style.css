@@ -1,0 +1,185 @@
+#logo_svg{
+    width: 40%;
+}
+
+.contenedor{
+    display: grid;
+    place-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white
+}
+
+
+header{
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(174, 39, 39);
+    border-radius: 8px;
+    padding: 10px;
+    align-items: center;
+    margin: 5px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    
+    width: 200px;
+    height: 50px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: rgb(182, 191, 0);
+}
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+/*--------Nosotros html--------*/
+
+.titulos{
+    color: rgb(174, 39, 39);
+    font-size: 56px;
+}
+
+.contenedor-nosotros{
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+hr{
+    border: 3px solid red;
+}
+
+p{
+    text-align: justify;
+    color: rgb(134, 134, 134);
+}
+
+/* --------------------------Footer------------------------- */
+
+#footer{
+    background-color: rgb(228, 228, 228);
+    border-top: 2px solid gray;
+    width: 100%;
+    padding: 15px;
+}
+
+#logo_f{
+    width: 200px;
+    height: 50px;
+}
+
+.links-a{
+    color:rgb(182, 191, 0);
+}
+
+.links-a:hover{
+    color: rgb(174, 39, 39);
+}
+
+.links-ab{
+    color:rgb(182, 191, 0);
+    font-size: 30px;
+}
+
+.links-ab:hover{
+    color: rgb(174, 39, 39);
+}
+
+/*-------------------Login y Sign up---------------------------------*/
+
+.box{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(182, 191, 0);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+#icon-user{
+    font-size: 100px;
+}
+
+#icon-register{
+    font-size: 100px;
+}
+
+#contenedor-login{
+    display: grid;
+    place-items: center;
+}
+
+.btn-register{
+    padding: 8px;
+    background-color: rgb(182, 191, 0);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+    font-weight: 600;
+}
+
+.btn-register:hover{
+    background-color: rgb(245, 34, 34);
+}
+
+.btn-login{
+    padding: 8px;
+    background-color: rgb(182, 191, 0);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+    font-weight: 600;
+}
+
+.btn-login:hover{
+    background-color: rgb(245, 34, 34);
+}
+
+
+/* ----------------Contacto----------------- */
+
+.contenedor-contacto{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-1{
+    flex-basis: 50%;
+}
+
+.container-2{
+    flex-basis: 50%;
+}
+
+#btn-contacto{
+    background-color: rgb(174, 39, 39);
+    border: none;
+    font-weight: 600;
+    color: white;
+}
+
+#btn-contacto:hover{
+    background-color: rgb(182, 191, 0);
+    border: none;
+}

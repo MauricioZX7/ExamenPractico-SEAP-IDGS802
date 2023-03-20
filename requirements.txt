@@ -1,8 +1,16 @@
 flask
 flask-sqlalchemy
 flask-security
+flask-wtf
+flask-admin
+flask-login
+flask-blueprint
 email-validator
 mysqlclient
 flask-marshmallow
 bcrypt
 pytz
+pymysql
+python-decouple
+
+

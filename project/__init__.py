@@ -17,7 +17,7 @@ def create_app():
     #Configuraciones necesarias.
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     app.config["SECRET_KEY"] = os.urandom(24)
-    app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:1218@localhost/flasksecurity"
+    app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:1218@localhost/soriana"
     app.config["SECURITY_PASSWORD_HASH"] = "pbkdf2_sha512"
     app.config["SECURITY_PASSWORD_SALT"] = "secretsalt"
 

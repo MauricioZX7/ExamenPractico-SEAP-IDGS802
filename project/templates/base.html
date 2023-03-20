@@ -1,57 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ejemplo de Autenticación con Flask</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <title>Soriana.com</title>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"/>-->
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/style.css"/>
+    <link rel="icon" href="../static/img/Logo-S2.ico">
+    <script src="https://kit.fontawesome.com/d64557ed89.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <section class="hero is-primary is-fullheight">
 
-        <div class="hero-head">
-            <nav class="navbar">
-                <div class="container">
-
-                    <div id="navbarMenuHeroA" class="navbar-menu">
-                        <div class="navbar-end">
-                            <a href="{{ url_for('main.index') }}" class="navbar-item">
-                                Inicio
-                            </a>
-                            {% if current_user.is_authenticated %}
-                            <a href="{{ url_for('main.profile') }}" class="navbar-item">
-                                Perfil de Usuario
-                            </a>
-                            {% endif %}
-                            {% if not current_user.is_authenticated %}
-                            <a href="{{ url_for('auth.login') }}" class="navbar-item">
-                                Login
-                            </a>
-                            <a href="{{ url_for('auth.register') }}" class="navbar-item">
-                                Registro
-                            </a>
-                            {% endif %}
-                            {% if current_user.is_authenticated %}
-                            <a href="{{ url_for('auth.logout') }}" class="navbar-item">
-                                Cerrar Sesión
-                            </a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-            </nav>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="../static/img/LogoSorianaSVG2.svg" alt="soriana.com"></a>
         </div>
+        <nav>
+            <a href="{{ url_for('main.index') }}" >
+                <i class="fa-solid fa-house"></i> Inicio
+            </a>
+            <a href="{{ url_for('main.nosotros') }}">
+                <i class="fa-solid fa-circle-info"></i> Nosotros
+            </a>
+            <a href="{{ url_for('main.contacto') }}">
+                <i class="fa-regular fa-address-book"></i> Contacto
+            </a>
+            {% if current_user.is_authenticated %}
+            <a href="{{ url_for('main.profile') }}">
+                <i class="fa-solid fa-circle-user"></i> Perfil de Usuario
+            </a>
+            {% endif %}
+            {% if current_user.is_authenticated%}
+            <a href="{{ url_for('main.agregar') }}">
+                <i class="fa-solid fa-plus"></i> Agregar producto
+            </a>
+            {% endif %}
+            {% if not current_user.is_authenticated %}
+            <a href="{{ url_for('auth.login') }}">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
+            </a>
+            <a href="{{ url_for('auth.register') }}">
+                <i class="fa-solid fa-user-plus"></i> Registro
+            </a>
+            {% endif %}
+            {% if current_user.is_authenticated %}
+            <a href="{{ url_for('auth.logout') }}">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+            </a>
+            {% endif %}
+        </nav>
 
-        <div class="hero-body">
-            <div class="container has-text-centered">
-               {% block content %}
-               {% endblock %}
+    </header>
+    
+    <br>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid" id="footer">
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="../static/img/LogoSorianaSVG.svg" id="logo_f">
+                <p>Monterrey, N.L.</p>
+            </div>
+            <div class="col-lg-3">
+                <h5 class="mb-3">Servicios</h5>
+                <div class="mb-2">
+                    <a href="#" class="links-a">Ayuda</a>
+                </div>
+                <div class="mb-2">
+                    <a href="#" class="links-a">Políticas de privacidad</a>
+                </div>
+                <div class="mb-2">
+                    <a href="#" class="links-a">Servicio al cliente</a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <h5 class="mb-3">Siguenos</h5>
+                <a href="#" class="links-ab"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="links-ab"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="links-ab"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="links-ab"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="links-ab"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="col-xs-12">
+                <p class="text-center"><i class="fa-regular fa-copyright"></i> Tiendas Soriana, S.A. de C.V. Alejandro de Rodas 3102-A Col. Cumbres 8º Sector C.P. 64610 Monterrey, N.L. México</p>
             </div>
         </div>
-    </section>
+    </div>
+    
+    
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
+
+
+<!-- <footer class="footers">
+    <div class="contenedor-footer">
+        <div class="footer-links">
+            <img src="../static/img/sori_com_2.png">
+        </div>
+
+        <div class="footer-links">
+            <h4>Compañia</h4>
+            <div class="links-soriana">
+                <a href="">Ayuda</a>
+                <a href="">Políticas de privacidad</a>
+                <a href="">Telefono</a>
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <h4>Redes Sociales</h4>
+            <div class="social-links">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            
+        </div>
+    </div>
+</footer> -->
+<!-- <nav class="navbar" id="menu">
+    <div class="container">
+        
+        <div id="nav-items">
+            <div id="logo">
+                <img src="../static/img/soriana-brandlogo.net.png">
+            </div>
+            <a href="{{ url_for('main.index') }}" class="navbar-item">
+                Inicio
+            </a>
+            {% if current_user.is_authenticated %}
+            <a href="{{ url_for('main.profile') }}" class="navbar-item">
+                Perfil de Usuario
+            </a>
+            {% endif %}
+            {% if not current_user.is_authenticated %}
+            <a href="{{ url_for('auth.login') }}" class="navbar-item">
+                Login
+            </a>
+            <a href="{{ url_for('auth.register') }}" class="navbar-item">
+                Registro
+            </a>
+            {% endif %}
+            {% if current_user.is_authenticated %}
+            <a href="{{ url_for('auth.logout') }}" class="navbar-item">
+                Cerrar Sesión
+            </a>
+            {% endif %}
+        </div>
+        
+    </div>
+</nav> -->

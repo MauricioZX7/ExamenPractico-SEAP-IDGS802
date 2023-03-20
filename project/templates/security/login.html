@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="column is-4 is-offset-4">
-    <h3 class="title">Login</h3>
+<div class="container" id="contenedor-login">
+    <i class="fa-solid fa-user" id="icon-user"></i>
+    <br>
+    <h3 class="title">Inicia sesión</h3>
+    <br>
     <div class="box">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -14,22 +17,24 @@
         <form method="POST" action="/security/login">
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" type="email" name="email" placeholder="Your Email" autofocus="">
+                    <input class="form-control" type="email" name="email" placeholder="Correo" autofocus="">
                 </div>
             </div>
-
+            <br>
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" type="password" name="password" placeholder="Password">
+                    <input class="form-control" type="password" name="password" placeholder="Contraseña">
                 </div>
             </div>
+            <br>
             <div class="field">
                 <label class="checkbox">
                     <input type="checkbox">
                     Recuerdame
                 </label>
             </div>
-            <button class="button is-block is-info is-large is-fullwidth">Login</button>
+            <br>
+            <button class="btn-login" type="submit">Login</button>
         </form>
     </div>
 </div>
