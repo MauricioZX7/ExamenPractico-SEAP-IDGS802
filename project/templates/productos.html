@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    {% from 'macros.html' import card %}
+    {% from '_macros.html' import product_card %}
 
     <h1 class="titulos">Productos</h1>
     <hr>
@@ -10,8 +10,8 @@
     <div class="container">
         <div class="row">
             {% for producto in productos %}
-                <div class="col-md-3">
-                    {{ product_card(producto.imagen, producto.nombreProducto, producto.marca, producto.precio, producto.descripcion, role) }}
+                <div class="col-md-3 mb-3">
+                    {{ product_card(producto.imagen, producto.nombreProducto, producto.marca, producto.precio) }}
                 </div>
             {% endfor %}
         </div>

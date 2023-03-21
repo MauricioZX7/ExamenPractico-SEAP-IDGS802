@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="contenedor-modificar">
+        <form action="/modificarProducto" name="sent" id="form-producto" method="post" enctype="multipart/form-data">
+            <div class="row-cols-1">
+                <div class="col-mb-3">
+                    <label class="form-label">ID: </label>
+                    <input type="text" class="form-control" name="id" value="{{idp}}">
+                </div>
+                <div class="col-mb-3">
+                    <label class="form-label">Nombre producto: </label>
+                    <input type="text" class="form-control" name="nombreProducto" value="{{nombrep}}">
+                </div>
+                <div class="col-mb-3">
+                    <label class="form-label">Categoria: </label>
+                    <input type="text" class="form-control" name="categoria" value="{{cat}}">
+                </div>
+                <div class="col-mb-3">
+                    <label class="form-label">Descripcion: </label>
+                    <textarea type="text" class="form-control" name="descripcion" value="">{{despc}}</textarea>
+                </div>
+                <div class="col-mb-3">
+                    <label class="form-label">Unidad medida: </label>
+                    <input type="text" class="form-control" name="unidadMedida" placeholder="pz, ml, Kg, Lt" value="{{unit}}" >
+                </div>
+                <div class="col-mb-3">
+                    <label class="form-label">Marca: </label>
+                    <input type="text" class="form-control" name="marca" value="{{marca}}">
+                </div>
+                <div class="col-mb-3">
+                    <label class="form-label">Precio: </label>
+                    <input type="text" class="form-control" name="precio" placeholder="299.99" value="{{precio}}">
+                </div>
+                <div class="col-mb-3">
+                    
+                    <img src="data:image/png;base64,{{ imagen }}" id="img-txt" width="256px" height="256px">
+                    <br>
+                    <input name="rutaImg" type="hiiden" id="img-text" value="{{ imagen }}" class="form-control">
+                    <br>
+                    <label class="form-label">Imagen: </label>
+                    <input type="file" id="imgs" class="form-control" name="imagen" onchange="ver()">
+                    
+                </div>
+            </div>
+            <div>
+                <br>
+                <input type="submit" class="btn btn-outline-success" name="agregar" value="Modificar">
+                <br>
+                <a href="/productos" class="btn btn-outline-danger">Cancelar</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+

@@ -183,3 +183,46 @@ p{
     background-color: rgb(182, 191, 0);
     border: none;
 }
+
+/* ----------------Administración------------- */
+
+.contenedor-admin{
+    display: flex;
+}
+
+.contenedor-agproductor{
+    margin-right: 10px;
+    border: 2px solid rgb(182, 191, 0);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.contenedor-tabla{
+    border: 2px solid rgb(182, 191, 0);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+th{
+    color: rgb(191, 0, 0);
+    border-bottom: 5px solid rgb(182, 191, 0);
+}
+
+.options-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor-modificar{
+    
+    border: 3px solid rgb(182, 191, 0);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.contenedor-eliminar{
+    border: 3px solid rgb(182, 191, 0);
+    border-radius: 8px;
+    padding: 15px;
+}

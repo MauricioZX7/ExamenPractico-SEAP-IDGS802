@@ -3,6 +3,7 @@ from . import db
 from flask_sqlalchemy import SQLAlchemy
 #Importamos la clase UserMixin de  flask_login
 from flask_security import UserMixin, RoleMixin
+from sqlalchemy.dialects.mysql import LONGTEXT
 
 users_roles = db.Table("user_roles",
     db.Column("userId", db.Integer, db.ForeignKey("user.id")),
@@ -39,7 +40,7 @@ class Producto(db.Model):
     unidadMedida = db.Column(db.String(50))
     marca = db.Column(db.String(50))
     precio = db.Column(db.Float)
-    imagen = db.Column(db.LargeBinary(length=20971520))
+    imagen = db.Column(LONGTEXT)
 
 
 
